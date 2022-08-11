@@ -1,9 +1,9 @@
 import React, {useContext, useEffect} from 'react';
-import {Message, Text} from "@bigcommerce/big-design";
-import {PageBody, PageHeader} from "../../components";
-import ConfigContext from "../../context/ConfigContext";
-import {useQueryParams, useStore, useStoreDeepLink} from "../../hooks";
-import {useHistory} from "react-router-dom";
+import {Message, Text} from '@bigcommerce/big-design';
+import {PageBody, PageHeader} from '../../components';
+import ConfigContext from '../../context/ConfigContext';
+import {useQueryParams, useStore, useStoreDeepLink} from '../../hooks';
+import {useHistory} from 'react-router-dom';
 
 const AccountLoggedOut = () => {
   const context = useContext(ConfigContext);

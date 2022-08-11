@@ -1,5 +1,5 @@
 import React from 'react';
-import {Flex, FlexItem, ProgressCircle} from "@bigcommerce/big-design";
+import {Flex, FlexItem, ProgressCircle} from '@bigcommerce/big-design';
 
 interface Props {
   size?: any;

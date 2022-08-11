@@ -1,4 +1,4 @@
-import {useScript} from "./useScript";
+import {useScript} from './useScript';
 
 export const useBigCommerceSDK = () => {
 

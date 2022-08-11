@@ -1,11 +1,11 @@
 import React from 'react';
-import {Message, Text} from "@bigcommerce/big-design";
-import {PageBody, PageHeader} from "../components";
-import {useCookies} from "react-cookie";
+import {Message, Text} from '@bigcommerce/big-design';
+import {PageBody, PageHeader} from '../components';
+import {useCookies} from 'react-cookie';
 
 const ErrorPage = () => {
   const [cookies] = useCookies(['last_error']);
-  const errorMessage = cookies.last_error ?? "Oops. Something went wrong. Please wait and try again.";
+  const errorMessage = cookies.last_error ?? 'Oops. Something went wrong. Please wait and try again.';
 
   return (
     <>

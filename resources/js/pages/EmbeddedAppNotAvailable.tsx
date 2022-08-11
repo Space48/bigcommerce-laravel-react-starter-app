@@ -1,8 +1,8 @@
 import React, {useContext} from 'react';
-import {Button, Message, Text} from "@bigcommerce/big-design";
-import {PageBody, PageHeader} from "../components";
-import ConfigContext from "../context/ConfigContext";
-import {openAppInNewWindow} from "../utils";
+import {Button, Message, Text} from '@bigcommerce/big-design';
+import {PageBody, PageHeader} from '../components';
+import ConfigContext from '../context/ConfigContext';
+import {openAppInNewWindow} from '../utils';
 
 const EmbeddedAppNotAvailable = () => {
   const context = useContext(ConfigContext);

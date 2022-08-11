@@ -1,9 +1,9 @@
 import React, {useContext} from 'react';
-import styled from "styled-components";
-import {Box, Button, Flex, FlexItem, H1, H4} from "@bigcommerce/big-design";
-import {CheckCircleIcon} from "@bigcommerce/big-design-icons";
-import ConfigContext from "../context/ConfigContext";
-import {useHistory, useParams} from "react-router-dom";
+import styled from 'styled-components';
+import {Box, Button, Flex, FlexItem, H1, H4} from '@bigcommerce/big-design';
+import {CheckCircleIcon} from '@bigcommerce/big-design-icons';
+import ConfigContext from '../context/ConfigContext';
+import {useHistory, useParams} from 'react-router-dom';
 
 const Container = styled(Box)`
   margin: 3rem auto;

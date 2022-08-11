@@ -2,7 +2,11 @@
 import React from 'react';
 import ConfigContext from './ConfigContext';
 
-const ConfigProvider = ({children}) => {
+interface Props {
+  children: React.ReactNode
+}
+
+const ConfigProvider = ({children}: Props) => {
   // .content here flags in TS
   const appId = document.head.querySelector('meta[name="app-id"]').content;
   const csrfToken = document.head.querySelector('meta[name="csrf-token"]').content;

@@ -3,8 +3,8 @@
  * Safari & Private browsing modes do not support third party cookies.
  * Detect if third party cookies are supported by the browser.
  */
-import {useCookies} from "react-cookie";
-import {useEffect, useState} from "react";
+import {useCookies} from 'react-cookie';
+import {useEffect, useState} from 'react';
 
 export const useSupportsThirdPartyCookies = () => {
   // Assume supported unless otherwise detected
@@ -16,7 +16,7 @@ export const useSupportsThirdPartyCookies = () => {
 
   useEffect(() => {
     if (!testCookieWritten) {
-      setCookie(testCookieName, 1, {path: '/', sameSite: "none", secure: true});
+      setCookie(testCookieName, 1, {path: '/', sameSite: 'none', secure: true});
       setTestCookieWritten(true);
     } else {
       if (!cookies[testCookieName]) {

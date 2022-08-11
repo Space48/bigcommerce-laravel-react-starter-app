@@ -1,15 +1,15 @@
 import React from 'react';
-import styled from "styled-components";
-import {BrowserRouter, Route} from "react-router-dom";
-import {AlertsManager, Box, GlobalStyles} from "@bigcommerce/big-design";
+import styled from 'styled-components';
+import {BrowserRouter, Route} from 'react-router-dom';
+import {AlertsManager, Box, GlobalStyles} from '@bigcommerce/big-design';
 import {SWRConfig} from 'swr'
-import axios from "axios";
-import ConfigProvider from "./context/ConfigProvider";
-import {EmbeddedAppNotAvailable} from "./pages";
-import {useBigCommerceSDK, useSupportsThirdPartyCookies} from "./hooks";
-import {isInIframe, alertsManager} from "./utils";
-import {AnimatedSwitch} from "./components";
-import {routes} from "./config"
+import axios from 'axios';
+import ConfigProvider from './context/ConfigProvider';
+import {EmbeddedAppNotAvailable} from './pages';
+import {useBigCommerceSDK, useSupportsThirdPartyCookies} from './hooks';
+import {isInIframe, alertsManager} from './utils';
+import {AnimatedSwitch} from './components';
+import {routes} from './config'
 
 const AppContainer = styled(Box)`
   max-width: 1200px;

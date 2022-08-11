@@ -1,6 +1,6 @@
 import React from 'react';
-import {Link as BigLink} from "@bigcommerce/big-design";
-import {Link as RouterLink, useHistory} from "react-router-dom"
+import {Link as BigLink} from '@bigcommerce/big-design';
+import {Link as RouterLink, useHistory} from 'react-router-dom'
 
 interface Props {
   style?: Record<string, string>;
@@ -19,7 +19,7 @@ const Link = (props: Props) => {
   const {to, children} = props;
 
   const history = useHistory();
-  const href = typeof to === "object" ? to.pathname : to;
+  const href = typeof to === 'object' ? to.pathname : to;
 
   return (
     <RouterLink

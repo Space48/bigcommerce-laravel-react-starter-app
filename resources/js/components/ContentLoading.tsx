@@ -1,6 +1,6 @@
 import React from 'react';
-import {Message} from "@bigcommerce/big-design";
-import Spinner from "./Spinner";
+import {Message} from '@bigcommerce/big-design';
+import Spinner from './Spinner';
 
 interface Props {
   loading: boolean,

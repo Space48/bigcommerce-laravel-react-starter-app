@@ -1,5 +1,5 @@
 import React from 'react';
-import {Box} from "@bigcommerce/big-design";
+import {Box} from '@bigcommerce/big-design';
 
 interface Props {
   children: React.ReactNode;

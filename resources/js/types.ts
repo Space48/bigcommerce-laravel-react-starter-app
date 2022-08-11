@@ -1,4 +1,4 @@
-import {ButtonProps} from "@bigcommerce/big-design/dist/components/Button/Button";
+import {ButtonProps} from '@bigcommerce/big-design/dist/components/Button/Button';
 
 export interface ContextType {
     appId: string;

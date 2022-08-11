@@ -1,6 +1,6 @@
 import {useContext} from 'react';
-import ConfigContext from "../context/ConfigContext";
-import {ContextType} from "../types";
+import ConfigContext from '../context/ConfigContext';
+import {ContextType} from '../types';
 
 export const useStoreDeepLink = store_hash => {
   const context = useContext<ContextType|undefined>(ConfigContext);

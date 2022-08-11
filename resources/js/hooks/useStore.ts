@@ -1,6 +1,6 @@
-import axios from "axios";
-import useSWR from "swr";
-import {useLogoutOn401Response} from "./useLogoutOn401Response";
+import axios from 'axios';
+import useSWR from 'swr';
+import {useLogoutOn401Response} from './useLogoutOn401Response';
 
 export const useStore = (store_hash: string | null = null) => {
   if (store_hash === null) {

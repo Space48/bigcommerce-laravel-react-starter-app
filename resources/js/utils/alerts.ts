@@ -1,4 +1,4 @@
-import {createAlertsManager} from "@bigcommerce/big-design";
+import {createAlertsManager} from '@bigcommerce/big-design';
 
 export const alertsManager: any = createAlertsManager();
 

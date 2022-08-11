@@ -1,6 +1,6 @@
 import React from 'react';
-import {PageBody, PageHeader} from "../components";
-import {Space48Apps} from "../components";
+import {PageBody, PageHeader} from '../components';
+import {Space48Apps} from '../components';
 
 const Dashboard = () => {
   return (

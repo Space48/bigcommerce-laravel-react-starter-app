@@ -1,6 +1,6 @@
 import React from 'react';
-import {Switch, useLocation} from "react-router-dom";
-import {CSSTransition, TransitionGroup} from "react-transition-group";
+import {Switch, useLocation} from 'react-router-dom';
+import {CSSTransition, TransitionGroup} from 'react-transition-group';
 
 interface Props {
   children: React.ReactNode;

@@ -1,9 +1,9 @@
 import React, {useContext} from 'react';
-import styled from "styled-components";
-import {Box, Button, H1, Text} from "@bigcommerce/big-design";
-import ConfigContext from "../context/ConfigContext";
-import {useHistory} from "react-router-dom";
-import useSWR from "swr";
+import styled from 'styled-components';
+import {Box, Button, H1, Text} from '@bigcommerce/big-design';
+import ConfigContext from '../context/ConfigContext';
+import {useHistory} from 'react-router-dom';
+import useSWR from 'swr';
 
 const Container = styled(Box)`
   margin: 3rem auto;

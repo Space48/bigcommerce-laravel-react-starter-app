@@ -1,11 +1,11 @@
 import React, {useMemo} from 'react';
-import {useHistory, useLocation} from "react-router-dom";
-import styled from "styled-components";
-import {Box, Button, Flex, FlexItem, H1, Text} from "@bigcommerce/big-design";
-import {ArrowBackIcon} from "@bigcommerce/big-design-icons";
-import Link from "./Link";
-import {Theme} from "../theme";
-import {Location, PageHeaderActions} from "../types";
+import {useHistory, useLocation} from 'react-router-dom';
+import styled from 'styled-components';
+import {Box, Button, Flex, FlexItem, H1, Text} from '@bigcommerce/big-design';
+import {ArrowBackIcon} from '@bigcommerce/big-design-icons';
+import Link from './Link';
+import {Theme} from '../theme';
+import {Location, PageHeaderActions} from '../types';
 
 const HeaderLink = styled(Link)`
   color: ${({theme}) => theme.colors.secondary60};

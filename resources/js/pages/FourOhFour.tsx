@@ -1,6 +1,6 @@
 import React from 'react';
-import {Text} from "@bigcommerce/big-design";
-import {PageHeader} from "../components";
+import {Text} from '@bigcommerce/big-design';
+import {PageHeader} from '../components';
 
 const FourOhFour = () => {
   return (

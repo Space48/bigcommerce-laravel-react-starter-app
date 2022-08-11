@@ -1,7 +1,7 @@
-import {Button, Flex, FlexItem, Grid, GridItem, H3, Link, Panel, Small, Text} from "@bigcommerce/big-design";
-import React from "react";
-import styled from "styled-components";
-import {Theme} from "../theme";
+import {Button, Flex, FlexItem, Grid, GridItem, H3, Link, Panel, Small, Text} from '@bigcommerce/big-design';
+import React from 'react';
+import styled from 'styled-components';
+import {Theme} from '../theme';
 
 const AppsGrid = styled(Grid)`
   grid-template-columns: 1fr;

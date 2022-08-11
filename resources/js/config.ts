@@ -6,7 +6,7 @@ import {
   InstallationSuccess,
   WelcomeNewUser,
   Dashboard,
-} from "./pages";
+} from './pages';
 
 export const routes = [
   {path: '/', component: Default},
