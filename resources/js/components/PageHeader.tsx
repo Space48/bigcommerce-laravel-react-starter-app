@@ -1,9 +1,8 @@
 import React, {useMemo} from 'react';
 import {useHistory, useLocation} from "react-router-dom";
 import styled from "styled-components";
-import {Box, Button, Flex, FlexItem, H1, Message, Text} from "@bigcommerce/big-design";
+import {Box, Button, Flex, FlexItem, H1, Text} from "@bigcommerce/big-design";
 import {ArrowBackIcon} from "@bigcommerce/big-design-icons";
-import {useStore} from "../hooks";
 import Link from "./Link";
 import {Theme} from "../theme";
 import {Location, PageHeaderActions} from "../types";
@@ -30,7 +29,6 @@ interface Props {
 }
 
 const PageHeader = ({title, actions, backLinkHref, backLinkText, storeHash = null, children}: Props) => {
-  const [store] = useStore(storeHash);
   const location = useLocation() as unknown as Location;
   const history = useHistory();
 
@@ -44,9 +42,6 @@ const PageHeader = ({title, actions, backLinkHref, backLinkText, storeHash = nul
 
   const backLocation = getBackLocation();
   const goBack = () => backLocation ? history.push(backLocation) : history.goBack();
-  const billingUrl = storeHash ? `/stores/${storeHash}/billing` : '#';
-  const helpUrl = storeHash ? `/stores/${storeHash}/help` : '#';
-  const whatsNewUrl = storeHash ? `/stores/${storeHash}/whats-new` : '#';
   const homeUrl = storeHash ? `/stores/${storeHash}` : '/stores';
 
   const renderedTitle = useMemo(
@@ -110,19 +105,6 @@ const PageHeader = ({title, actions, backLinkHref, backLinkText, storeHash = nul
       }
       {renderedTitle}
       {children}
-      {
-        store && !store.active &&
-        <Message
-          type="error"
-          actions={[{
-            text: 'Subscribe to re-enable',
-            onClick: () => {
-              history.push(billingUrl);
-            }
-          }]}
-          messages={[{text: `You do not have a paid subscription, so functionality has been disabled.`}]}
-          marginVertical="medium"/>
-      }
     </Box>
   )
 };

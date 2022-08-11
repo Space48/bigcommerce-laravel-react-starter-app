@@ -1,5 +1,5 @@
 export const useLogoutOn401Response = (status, store_hash: string | null = null) => {
-  let loggedOutUrl: string = `/account/loggedout`;
+  let loggedOutUrl = '/account/loggedout';
   if (store_hash !== null) {
     loggedOutUrl = loggedOutUrl + `?store_hash=${store_hash}`;
   }

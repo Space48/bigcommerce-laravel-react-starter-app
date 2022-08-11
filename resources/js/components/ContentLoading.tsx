@@ -1,5 +1,5 @@
 import React from 'react';
-import {Message,} from "@bigcommerce/big-design";
+import {Message} from "@bigcommerce/big-design";
 import Spinner from "./Spinner";
 
 interface Props {
