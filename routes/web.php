@@ -1,18 +1,23 @@
 <?php
 
+use App\Http\Controllers\AppController;
+use App\Http\Controllers\Bigcommerce\InstallController;
+use App\Http\Controllers\Bigcommerce\LoadController;
+use App\Http\Controllers\Bigcommerce\ProxyController;
 use Illuminate\Support\Facades\Route;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
+Route::get('/bc/install', InstallController::class)->name('bc.install');
+Route::get('/bc/load', LoadController::class)->name('bc.load');
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/stores/{store}', AppController::class)->name('store.home');
+Route::get('/stores/{store}/installed', AppController::class)->name('store.installed');
+Route::get('/stores/{store}/welcome', AppController::class)->name('store.welcome');
+Route::get('/account/loggedout', AppController::class)->name('account.loggedout');
+
+Route::middleware('auth')->group(function () {
+    Route::any('/bc-api/stores/{store}/{endpoint}', ProxyController::class)->where('endpoint', 'v2\/.*|v3\/.*');
 });
+
+Route::get('/{url?}', AppController::class)
+    ->where('url', '^(?!nova.*$).*')
+    ->name('home');

@@ -1,10 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Example from "./components/Example";
+import App from './App';
+import {CookiesProvider} from "react-cookie";
 
 const Root = () => {
   return (
-    <Example />
+    <CookiesProvider>
+      <App />
+    </CookiesProvider>
   )
 }
 

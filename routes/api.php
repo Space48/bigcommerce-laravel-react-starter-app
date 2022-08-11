@@ -1,5 +1,8 @@
 <?php
 
+use App\Http\Controllers\Bigcommerce\RemoveUserController;
+use App\Http\Controllers\Bigcommerce\UninstallController;
+use App\Http\Controllers\Bigcommerce\Webhooks\AppUninstalledController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -14,6 +17,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
-});
+Route::get('/bc/remove-user', RemoveUserController::class);
+Route::get('/bc/uninstall', UninstallController::class);
+
+Route::post('/bc/webhook/app/uninstalled', AppUninstalledController::class)
+    ->name('webhook.app.uninstalled');
