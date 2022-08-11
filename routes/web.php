@@ -4,6 +4,7 @@ use App\Http\Controllers\AppController;
 use App\Http\Controllers\Bigcommerce\InstallController;
 use App\Http\Controllers\Bigcommerce\LoadController;
 use App\Http\Controllers\Bigcommerce\ProxyController;
+use App\Http\Controllers\User\UserController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/bc/install', InstallController::class)->name('bc.install');
@@ -15,6 +16,8 @@ Route::get('/stores/{store}/welcome', AppController::class)->name('store.welcome
 Route::get('/account/loggedout', AppController::class)->name('account.loggedout');
 
 Route::middleware('auth')->group(function () {
+    Route::get('/api/users/me', UserController::class);
+
     Route::any('/bc-api/stores/{store}/{endpoint}', ProxyController::class)->where('endpoint', 'v2\/.*|v3\/.*');
 });
 

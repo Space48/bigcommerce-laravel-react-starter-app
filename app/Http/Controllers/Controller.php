@@ -10,5 +10,16 @@ use Illuminate\Routing\Controller as BaseController;
 
 class Controller extends BaseController
 {
-    use AuthorizesRequests, SendsJsonResponse, DispatchesJobs, ValidatesRequests;
+    use AuthorizesRequests, DispatchesJobs, SendsJsonResponse, ValidatesRequests;
+
+    /**
+     * @param array $messages
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
+     */
+    protected function redirectToErrorPage(array $messages)
+    {
+        return redirect('/error')->withCookie(
+            \cookie('last_error', implode('\n', $messages), 0, '/', null, true, false)
+        );
+    }
 }
