@@ -43,10 +43,6 @@ class BigcommerceStore extends Model
 
     protected $appends = [
         'active',
-        'has_free_access',
-        'on_trial',
-        'sandbox',
-        'subscribed',
         'timezone_offset',
     ];
 
@@ -150,6 +146,7 @@ class BigcommerceStore extends Model
         return decrypt($this->attributes['access_token']);
     }
 
+
     /**
      * Get timezone offset.
      *
@@ -176,18 +173,6 @@ class BigcommerceStore extends Model
         return 'store_hash';
     }
 
-    /**
-     * Generate a link that directs user to the app within their BC admin
-     * @return string
-     */
-    public function getAppDeepLink()
-    {
-        return sprintf(
-            "https://store-%s.mybigcommerce.com/manage/app/%s",
-            $this->store_hash,
-            config('bigcommerce.app_id')
-        );
-    }
 
     /**
      * Get store hash from 'stores/${store_hash' string that BigCommerce regularly
@@ -210,5 +195,15 @@ class BigcommerceStore extends Model
     public function uri(): string
     {
         return sprintf('https://store-%s.mybigcommerce.com', $this->store_hash);
+    }
+
+    public function active(): bool
+    {
+        return $this->installed;
+    }
+
+    public function getActiveAttribute()
+    {
+        return $this->active();
     }
 }

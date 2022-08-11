@@ -32,7 +32,7 @@ const FormContainer = styled.div`
   }
 `;
 
-const Home = () => {
+const Default = () => {
   const context = useContext(ConfigContext);
   const history = useHistory();
 
@@ -60,4 +60,4 @@ const Home = () => {
   );
 }
 
-export default Home;
+export default Default;

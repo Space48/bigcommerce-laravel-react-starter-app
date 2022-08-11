@@ -20,7 +20,6 @@ class WebhookManager
     {
         $this->requiredWebhooks = [
             'store/app/uninstalled' => route('webhook.app.uninstalled'),
-            'store/product/deleted' => route('webhook.product.deleted'),
         ];
 
         $this->bigcommerce = $bigcommerce;

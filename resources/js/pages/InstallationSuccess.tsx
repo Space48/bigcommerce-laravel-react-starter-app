@@ -1,9 +1,9 @@
 import React, {useContext} from 'react';
 import styled from "styled-components";
-import {Box, Flex, FlexItem, H1, H4} from "@bigcommerce/big-design";
+import {Box, Button, Flex, FlexItem, H1, H4} from "@bigcommerce/big-design";
 import {CheckCircleIcon} from "@bigcommerce/big-design-icons";
 import ConfigContext from "../context/ConfigContext";
-import {useParams} from "react-router-dom";
+import {useHistory, useParams} from "react-router-dom";
 
 const Container = styled(Box)`
   margin: 3rem auto;
@@ -18,10 +18,24 @@ const Img = styled.img`
   max-width: 100%;
 `;
 
+const FormContainer = styled.div`
+  display: inline-block;
+
+  button {
+    display: block;
+    margin: 2rem auto;
+    width: 10rem;
+  }
+
+  div {
+    display: inline-flex;
+  }
+`;
+
 const InstallationSuccess = () => {
   const context = useContext(ConfigContext);
   const {store_hash} = useParams();
-  const redirectTo = store_hash ? `/stores/${store_hash}` : '/';
+  const history = useHistory();
 
   return (
     <Container>
@@ -36,6 +50,10 @@ const InstallationSuccess = () => {
       </Flex>
 
       <H1 marginVertical="xxxLarge">Thanks for choosing {context?.appName}</H1>
+
+      <FormContainer>
+        <Button onClick={() => history.push(`/stores/${store_hash}`)}>Go to Dashboard</Button>
+      </FormContainer>
     </Container>
   );
 }

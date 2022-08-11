@@ -4,4 +4,4 @@ export * from './useSupportsThirdPartyCookies';
 export * from './useStore';
 export * from './useStoreDeepLink';
 export * from './useQueryParams';
-export * from './useLogoutOn401Response'
+export * from './useLogoutOn401Response';

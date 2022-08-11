@@ -4,6 +4,8 @@ use App\Http\Controllers\AppController;
 use App\Http\Controllers\Bigcommerce\InstallController;
 use App\Http\Controllers\Bigcommerce\LoadController;
 use App\Http\Controllers\Bigcommerce\ProxyController;
+use App\Http\Controllers\BigcommerceStore\BigcommerceStoreCollectionController;
+use App\Http\Controllers\BigcommerceStore\BigcommerceStoreViewController;
 use App\Http\Controllers\User\UserController;
 use Illuminate\Support\Facades\Route;
 
