@@ -5,8 +5,8 @@ namespace App\Http\Controllers\Bigcommerce;
 use App\Http\Controllers\Controller;
 use App\Models\BigcommerceStore;
 use App\Services\Bigcommerce;
+use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
-use Illuminate\Http\Response;
 
 class ProxyController extends Controller
 {
@@ -15,7 +15,7 @@ class ProxyController extends Controller
     {
     }
 
-    public function __invoke(Request $request, BigcommerceStore $store, string $endpoint): Response
+    public function __invoke(Request $request, BigcommerceStore $store, string $endpoint): JsonResponse
     {
         $response = $this->bigcommerce->rawRequest(
             $store->access_token,
@@ -26,6 +26,6 @@ class ProxyController extends Controller
             $request->json()->all()
         );
 
-        return response($response->body(), $response->status(), $response->headers());
+        return $this->jsonResponse(json_decode($response->body(), true), $response->status());
     }
 }

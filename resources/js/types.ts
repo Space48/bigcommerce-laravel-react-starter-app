@@ -1,4 +1,5 @@
 import {ButtonProps} from '@bigcommerce/big-design/dist/components/Button/Button';
+import {TablePaginationProps} from '@bigcommerce/big-design/dist/components/Table/types';
 
 export interface ContextType {
     appId: string;
@@ -20,4 +21,23 @@ export interface Location {
     state: {
         referrer?: string;
     }
+}
+
+export interface ProductImage {
+    url_thumbnail: string;
+}
+
+export interface Product {
+    sku: string;
+    name: string;
+    price: number;
+    inventory_level: number;
+    custom_url: {
+        url: string;
+    }
+    images: ProductImage[]
+}
+
+export interface ProductPagination extends TablePaginationProps {
+
 }

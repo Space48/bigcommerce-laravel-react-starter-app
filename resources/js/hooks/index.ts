@@ -1,4 +1,5 @@
 export * from './useBigCommerceSDK';
+export * from './useProducts';
 export * from './useScript';
 export * from './useSupportsThirdPartyCookies';
 export * from './useStore';
