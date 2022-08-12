@@ -37,7 +37,7 @@ const WelcomeNewUser = () => {
   const history = useHistory();
   return (
     <Container>
-      <Img src='/img/logo-300x111.png' alt={`${context?.appName} Logo`}/>
+      <Img src='/img/logo.png' alt={`${context?.appName} Logo`}/>
       <H1>Welcome to {context?.appName}</H1>
 
       <FormContainer>

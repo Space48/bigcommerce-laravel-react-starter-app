@@ -39,7 +39,7 @@ const InstallationSuccess = () => {
 
   return (
     <Container>
-      <Img src='/img/logo-300x111.png' alt={`${context?.appName} Logo`}/>
+      <Img src='/img/logo.png' alt={`${context?.appName} Logo`}/>
       <Flex flexDirection="row" alignItems="center" justifyContent="center" marginVertical="large">
         <FlexItem>
           <CheckCircleIcon color="success"/>

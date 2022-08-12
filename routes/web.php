@@ -18,8 +18,8 @@ Route::get('/stores/{store}/welcome', AppController::class)->name('store.welcome
 Route::get('/account/loggedout', AppController::class)->name('account.loggedout');
 
 Route::middleware('auth')->group(function () {
+    // your custom app routes should go here.
     Route::get('/api/users/me', UserController::class);
-
     Route::any('/bc-api/stores/{store}/{endpoint}', ProxyController::class)->where('endpoint', 'v2\/.*|v3\/.*');
 });
 

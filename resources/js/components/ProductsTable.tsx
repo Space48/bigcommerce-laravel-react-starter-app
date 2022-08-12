@@ -14,7 +14,6 @@ const Image = styled.img`
 `
 
 const ProductsTable = ({products, pagination}: Props) => {
-  console.log('PRODUCTS', products);
   return products ? (
     <Table
       itemName="Products"

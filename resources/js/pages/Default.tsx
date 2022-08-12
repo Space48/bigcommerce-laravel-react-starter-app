@@ -40,7 +40,7 @@ const Default = () => {
 
   return (
     <Container>
-      <Img src='/img/logo-300x111.png' alt={`${context?.appName} Logo`}/>
+      <Img src='/img/logo.png' alt={`${context?.appName} Logo`}/>
       <H1>{context?.appName}</H1>
       <Text bold>{context?.appDescription}</Text>
       <FormContainer>
