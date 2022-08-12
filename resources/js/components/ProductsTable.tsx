@@ -14,11 +14,8 @@ const Image = styled.img`
 `
 
 const ProductsTable = ({products, pagination}: Props) => {
-  if (!products) {
-    return null;
-  }
-
-  return (
+  console.log('PRODUCTS', products);
+  return products ? (
     <Table
       itemName="Products"
       keyField="sku"
@@ -35,11 +32,11 @@ const ProductsTable = ({products, pagination}: Props) => {
           render: ({ sku }) => sku,
         },
         { header: 'Name', hash: 'name', render: ({ name }) => name },
-        { header: 'Price', hash: 'price', render: ({ price }) => price },
+        { header: 'Price', hash: 'price', render: ({ price }) => `£${price.toFixed(2)}` },
       ]}
       items={products}
     />
-  )
+  ) : null;
 }
 
 export default ProductsTable;
