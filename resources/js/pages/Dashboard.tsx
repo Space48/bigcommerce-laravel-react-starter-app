@@ -1,5 +1,5 @@
 import React, {useMemo, useState} from 'react';
-import {ContentLoading, PageBody, PageHeader} from '../components';
+import {ContentLoading, PageBody, PageHeader, Spinner} from '../components';
 import {Panel} from '@bigcommerce/big-design';
 import {useParams} from 'react-router-dom';
 import {useProducts} from '../hooks';
