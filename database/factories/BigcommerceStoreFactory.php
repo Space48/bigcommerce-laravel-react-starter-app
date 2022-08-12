@@ -24,7 +24,6 @@ class BigcommerceStoreFactory extends Factory
             'timezone_raw_offset' => $this->faker->randomNumber(),
             'timezone_dst_offset' => $this->faker->randomNumber(),
             'timezone_dst_correction' => $this->faker->boolean(),
-            'trial_ends_at' => Carbon::now()->addDays(14),
         ];
     }
 
