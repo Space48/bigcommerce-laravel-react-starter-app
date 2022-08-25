@@ -1,1 +1,29 @@
-// custom styles goes here.
+body {
+  background-color: #f6f7fc;
+}
+
+.fade-enter {
+  opacity: 0;
+  z-index: 1;
+}
+
+.fade-enter.fade-enter-active {
+  opacity: 1;
+  transition: opacity 50ms ease-in;
+}
+
+.fade-exit {
+  opacity: 1;
+}
+
+.fade-exit-active {
+  opacity: 0;
+  transition: opacity 50ms ease-in;
+}
+
+.page {
+  width: 100%;
+  position: absolute;
+  top:0 ;
+  left: 0;
+}
