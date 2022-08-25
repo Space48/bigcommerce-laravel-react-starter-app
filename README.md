@@ -56,9 +56,9 @@ Then:
 
 Next, if you haven’t already, create an app on your Bigcommerce developer account. You’ll need to populate the following fields under the technical tab, to match your local development domain.
 
+- Auth Callback URL: **https://your-local-domain.com/bc/install**
+- Load Callback URL: **https://your-local-domain.com/bc/load**
 - Remove User Callback URL: **https://your-local-domain.com/api/bc/remove-user**
-- Auth Callback URL: **https://your-local-domain.com/api/bc/install**
-- Load Callback URL: **https://your-local-domain.com/api/bc/load**
 - Uninstall Callback URL: **https://your-local-domain.com/api/bc/uninstall**
 
 You’ll also need to set the following OAuth scopes:
