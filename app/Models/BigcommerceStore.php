@@ -38,7 +38,6 @@ class BigcommerceStore extends Model
         'timezone_raw_offset',
         'timezone_dst_offset',
         'timezone_dst_correction',
-        'mapbox_api_key'
     ];
 
     protected $appends = [
